@@ -22,7 +22,7 @@ abstract class AbstractRootClass
 
 	public static function MyFunction()
 	{
-		return array('root');
+		return array();
 	}
 }
 
@@ -30,7 +30,7 @@ class Child_1 extends AbstractRootClass
 {
 	public static function MyFunction()
 	{
-		return array_merge(parent::MyFunction(), array('1'));
+		return array_merge(parent::MyFunction(), array("level", "1", "1"));
 	}
 }
 
@@ -38,7 +38,7 @@ class Child_1_1 extends Child_1
 {
 	public static function MyFunction()
 	{
-		return array_merge(parent::MyFunction(), array('1_1'));
+		return array_merge(parent::MyFunction(), array("level 2", "1_1"));
 	}
 }
 
@@ -47,6 +47,6 @@ class Child_1_1_1 extends Child_1_1
 	public static function MyFunction()
 	{
 		return parent::MyFunction();
-		// nothing special here
+		//return array_merge(parent::ListExpectedParams(), array());
 	}
 }
