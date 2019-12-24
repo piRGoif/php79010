@@ -28,12 +28,25 @@ abstract class AbstractRootClass
 
 class Child_1 extends AbstractRootClass
 {
+	public static function MyFunction()
+	{
+		return array('root', '_1');
+	}
 }
 
 class Child_1_1 extends Child_1
 {
+	public static function MyFunction()
+	{
+		return array('root', '_1', '_1_1');
+	}
 }
 
 class Child_1_1_1 extends Child_1_1
 {
+	public static function MyFunction()
+	{
+		return parent::MyFunction();
+		// nothing special here
+	}
 }
