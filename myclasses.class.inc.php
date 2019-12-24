@@ -13,5 +13,8 @@ abstract class AbstractRootClass
 
 class Child_1 extends AbstractRootClass
 {
+}
 
+class Child_1_1 extends Child_1
+{
 }
