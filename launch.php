@@ -2,7 +2,7 @@
 
 echo "launching...\n";
 
-require_once 'myclasses.class.inc.php';
+require_once 'class-hierarchy.class.inc.php';
 echo "after require\n";
 
 echo "before child class init : lvl 1\n";
@@ -30,3 +30,9 @@ $oAttDef = new AttributeString('test', array(
 	)
 );
 echo "after new AttributeString\n";
+
+require_once 'myclass.class.inc.php';
+echo "before call_user_func\n";
+$sPHPClass = 'MyClass';
+call_user_func(array($sPHPClass, 'Init'));
+echo "after call_user_func\n";
