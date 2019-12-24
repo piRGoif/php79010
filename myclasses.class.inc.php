@@ -8,6 +8,21 @@ abstract class AbstractRootClass
 	{
 		$this->m_sCode = $sCode;
 		$this->m_aParams = $aParams;
+		$this->ConsistencyCheck();
+	}
+
+	protected function ConsistencyCheck()
+	{
+		$aArray = static::MyFunction();
+		foreach($aArray as $sValue)
+		{
+			echo "   - $sValue\n";
+		}
+	}
+
+	public static function MyFunction()
+	{
+		return array('root');
 	}
 }
 
