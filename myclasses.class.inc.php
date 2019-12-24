@@ -30,7 +30,7 @@ class Child_1 extends AbstractRootClass
 {
 	public static function MyFunction()
 	{
-		return array('root', '_1');
+		return array_merge(parent::MyFunction(), array('1'));
 	}
 }
 
@@ -38,7 +38,7 @@ class Child_1_1 extends Child_1
 {
 	public static function MyFunction()
 	{
-		return array('root', '_1', '_1_1');
+		return array_merge(parent::MyFunction(), array('1_1'));
 	}
 }
 
